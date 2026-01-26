@@ -1,0 +1,47 @@
+{
+  "text": {
+    "suche": 17,
+    "einen": 3,
+    "cocktail": 1,
+    "mit": 12,
+    "brombeeren": 0,
+    "ich": 6,
+    "habe": 5,
+    "rum": 16,
+    "und": 18,
+    "minze": 10,
+    "zeig": 20,
+    "mir": 11,
+    "ein": 2,
+    "rezept": 15,
+    "limette": 8,
+    "zucker": 21,
+    "was": 19,
+    "kann": 7,
+    "gin": 4,
+    "machen": 9,
+    "möchte": 13,
+    "orangen": 14
+  },
+  "intent": {
+    "suche_cocktail": 0
+  },
+  "response": null,
+  "action_name": {
+    "action_listen": 6,
+    "action_restart": 7,
+    "action_session_start": 9,
+    "action_default_fallback": 4,
+    "action_deactivate_loop": 1,
+    "action_revert_fallback_events": 8,
+    "action_default_ask_affirmation": 2,
+    "action_default_ask_rephrase": 3,
+    "action_two_stage_fallback": 11,
+    "action_unlikely_intent": 12,
+    "action_back": 0,
+    "action_extract_slots": 5,
+    "action_suche_cocktail": 10
+  },
+  "action_text": null,
+  "intent_response_key": null
+}

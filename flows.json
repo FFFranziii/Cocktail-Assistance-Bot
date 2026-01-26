@@ -1,0 +1,22 @@
+[
+    {
+        "id": "4884a4320c1b718a",
+        "type": "function",
+        "z": "d54599eed3170d11",
+        "name": "function 1",
+        "func": "let cocktails = msg.payload; // JSON-Array aus Excel\nlet zutatMap = {};\n\ncocktails.forEach(cocktail => {\n    // Array für alle Zutaten des aktuellen Cocktails\n    let zutatenArray = [];\n\n    // Alle Spalten, die Zutaten enthalten\n    [\"Spirituose\", \"Alkoholische Aromazutat\", \"Verlängerer\", \"Filler\",\n        \"Frucht\", \"sonstige Zutaten\", \"Eis\"].forEach(col => {\n            if (cocktail[col]) {\n                // Trennen bei Komma oder Semikolon\n                let teile = cocktail[col].split(/[,;]+/).map(z => z.trim().toLowerCase());\n                zutatenArray.push(...teile);\n            }\n        });\n\n    // Map aufbauen: jede Zutat → Cocktails, inkl. kompletter Zutatenliste\n    zutatenArray.forEach(zutat => {\n        if (!zutatMap[zutat]) {\n            zutatMap[zutat] = [];\n        }\n        zutatMap[zutat].push({\n            name: cocktail.Cocktail,\n            zutaten: zutatenArray // <-- hier speichern wir die **komplette Zutatenliste**\n        });\n    });\n});\n\n// Map global speichern\nglobal.set(\"zutatMap\", zutatMap);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 80,
+        "y": 260,
+        "wires": [
+            [
+                "f7a20fdbada3a83e"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,129 @@
+version: "3.1"
+nlu:
+- intent: suche_cocktail
+  examples: |
+    - Suche einen Cocktail mit [Brombeeren](zutaten)
+    - Ich habe [Rum](zutaten) und [Minze](zutaten)
+    - Ich habe [Rum](zutaten)
+    - Zeig mir ein Rezept mit [Limette](zutaten) und [Zucker](zutaten)
+    - Zeig mir ein Rezept mit [Limette](zutaten)
+    - Was kann ich mit [Gin](zutaten) machen
+    - Was kann ich mit [Gin](zutaten) und [Rum](zutaten) machen
+    - Ich möchte einen Cocktail mit [Orangen](zutaten)
+    - Ich habe [Wodka](zutaten) und [Limette](zutaten)
+    - Gibt es einen Cocktail mit [Erdbeeren](zutaten) und [Rum](zutaten)?
+    - Zeig mir etwas mit [Cointreau](zutaten)
+    - Ich möchte einen Drink mit [Minze](zutaten) und [Zucker](zutaten)
+    - Ich habe [Cachaça](zutaten)
+    - Was kann ich mit [Basilikum](zutaten) und [Gin](zutaten) machen?
+    - Suche einen Drink mit [Maracuja](zutaten)
+    - Zeig mir einen Cocktail mit [Himbeeren](zutaten)
+    - Ich möchte einen Cocktail mit [Rum](zutaten), [Limette](zutaten) und [Minze](zutaten)
+    - Ich habe [Tequila](zutaten) und [Orangen](zutaten)
+    - Ich möchte einen Drink mit [Zitrone](zutaten) und [Zucker](zutaten)
+    - Zeig mir etwas mit [Soda](zutaten)
+    - Suche ein Rezept mit [Gin](zutaten), [Limette](zutaten) und [Gurke](zutaten)
+    - Suche einen Cocktail mit [Bourbon](zutaten)
+    - Ich habe [Bourbon](zutaten) und [Zucker](zutaten)
+    - Was kann ich mit [Bourbon](zutaten) und [Bitter](zutaten) machen
+    - Zeig mir einen Drink mit [Bourbon](zutaten), [Zucker](zutaten) und [Bitter](zutaten)
+    - Ich habe [Calvados](zutaten)
+    - Suche einen Cocktail mit [Calvados](zutaten) und [Zucker](zutaten)
+    - Gibt es einen Drink mit [Calvados](zutaten) und [Limettensaft](zutaten)?
+    - Ich habe [Wodka](zutaten)
+    - Ich habe [Wodka](zutaten) und [Ginger Ale](zutaten)
+    - Was kann ich mit [Wodka](zutaten), [Limettensaft](zutaten) und [Ginger Ale](zutaten) machen?
+    - Suche einen Cocktail mit [Wodka](zutaten) und [Grenadine](zutaten)
+    - Zeig mir einen Drink mit [Weinbrand](zutaten)
+    - Ich habe [Weinbrand](zutaten) und [Orangenlikör](zutaten)
+    - Gibt es einen Cocktail mit [Weinbrand](zutaten) und [Zucker](zutaten)?
+    - Suche etwas mit [Scotch](zutaten)
+    - Was kann ich mit [Scotch](zutaten) und [Soda](zutaten) machen
+    - Ich habe [Scotch](zutaten), [Soda](zutaten) und [Limettensaft](zutaten)
+    - Zeig mir einen Cocktail mit [Orangenlikör](zutaten)
+    - Ich habe [Orangenlikör](zutaten) und [Grenadine](zutaten)
+    - Suche einen Drink mit [Amaretto](zutaten)
+    - Ich habe [Amaretto](zutaten) und [Schokoladenlikör](zutaten)
+    - Zeig mir ein Rezept mit [Amaretto](zutaten), [Schokoladenlikör](zutaten) und [Sahne](zutaten)
+    - Was kann ich mit [Bitter](zutaten) machen?
+    - Ich habe [Bitter](zutaten) und [Zucker](zutaten)
+    - Suche einen Cocktail mit [Whiskey](zutaten)
+
+
+- intent: cocktail_aussuchen
+  examples: |
+    - [Moscow Mule](cocktail)
+    - Ich möchte den [Moscow Mule](cocktail)
+    - [Bloody Mary](cocktail)
+    - den [Mojito](cocktail) bitte
+    - [Jagertee](cocktail)
+    - [Mojito](cocktail)
+    - [Caipirinha](cocktail)
+    - [Moscow Mule](cocktail)
+    - [Bloody Mary](cocktail)
+    - [Tequila Sunrise](cocktail)
+    - [Gin Tonic](cocktail)
+    - den [Mojito](cocktail)
+    - einen [Moscow Mule](cocktail) bitte
+    - ich hätte gern einen [Bloody Mary](cocktail)
+    - ich nehme den [Caipirinha](cocktail)
+    - bitte den [Gin Tonic](cocktail)
+    - [Mojito](cocktail) bitte
+    - [Moscow Mule](cocktail)
+    - [Bloody Mary](cocktail) klingt gut
+    - [Gin Tonic](cocktail)
+    - zeig mir die Zutaten für den [Moscow Mule](cocktail)
+    - was brauche ich für einen [Mojito](cocktail)?
+    - wie macht man einen [Bloody Mary](cocktail)
+    - welche Zutaten hat der [Caipirinha](cocktail)
+    - [moscow mule](cocktail)
+    - [MOJITO](cocktail)
+    - [gin tonic](cocktail)
+    - [Old Fashioned](cocktail)
+    - den [Old Fashioned](cocktail) bitte
+    - ich nehme den [Old Fashioned](cocktail)
+    - ich hätte gern einen [Old Fashioned](cocktail)
+    - [Whiskey Sour](cocktail)
+    - einen [Whiskey Sour](cocktail) bitte
+    - ich möchte einen [Whiskey Sour](cocktail)
+    - der [Whiskey Sour](cocktail) klingt gut
+    - [Margarita](cocktail)
+    - bitte eine [Margarita](cocktail)
+    - ich nehme die [Margarita](cocktail)
+    - [Pina Colada](cocktail)
+    - ich hätte gern eine [Pina Colada](cocktail)
+    - die [Pina Colada](cocktail) bitte
+    - [Long Island Iced Tea](cocktail)
+    - einen [Long Island Iced Tea](cocktail)
+    - ich nehme den [Long Island Iced Tea](cocktail)
+    - [White Russian](cocktail)
+    - den [White Russian](cocktail)
+    - bitte den [White Russian](cocktail)
+    - [Black Russian](cocktail)
+    - ich möchte einen [Black Russian](cocktail)
+    - [Negroni](cocktail)
+    - der [Negroni](cocktail) bitte
+    - ich entscheide mich für den [Negroni](cocktail)
+    - [Aperol Spritz](cocktail)
+    - einen [Aperol Spritz](cocktail) bitte
+    - ich nehme den [Aperol Spritz](cocktail)
+    - [Hugo](cocktail)
+    - bitte einen [Hugo](cocktail)
+    - [Cosmopolitan](cocktail)
+    - ich hätte gern einen [Cosmopolitan](cocktail)
+    - [Mai Tai](cocktail)
+    - der [Mai Tai](cocktail) klingt gut
+    - [Sex on the Beach](cocktail)
+    - einen [Sex on the Beach](cocktail)
+    - ich nehme den [Sex on the Beach](cocktail)
+    - [Cuba Libre](cocktail)
+    - bitte einen [Cuba Libre](cocktail)
+    - [French 75](cocktail)
+    - ich hätte gern einen [French 75](cocktail)
+    - [Espresso Martini](cocktail)
+    - den [Espresso Martini](cocktail) bitte
+
+
+
+
+

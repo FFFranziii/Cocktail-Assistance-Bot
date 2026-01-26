@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+  - suche_cocktail
+  - cocktail_aussuchen
+
+entities:
+  - zutaten
+  - cocktail
+
+slots:
+  zutaten: # Benutzereingabe, z.B. Gin, Whiskey ...
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: zutaten
+  cocktail_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: cocktail
+
+responses:
+  utter_default:
+    - text: "Entschuldigung, ich habe dich nicht verstanden."
+
+
+actions:
+  - action_suche_cocktail
+  - action_suche_rezept
