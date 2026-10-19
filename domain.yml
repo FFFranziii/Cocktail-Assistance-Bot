@@ -3,17 +3,20 @@ version: "3.1"
 intents:
   - suche_cocktail
   - cocktail_aussuchen
+  - Neustart
+  - alles_andere
 
 entities:
   - zutaten
   - cocktail
+  - kategorie
 
 slots:
   zutaten: # Benutzereingabe, z.B. Gin, Whiskey ...
     type: list
     influence_conversation: true
     mappings:
-      - type: from_entity
+      - type: custom
         entity: zutaten
   cocktail_name:
     type: text
@@ -21,12 +24,28 @@ slots:
     mappings:
       - type: from_entity
         entity: cocktail
+  kategorie:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: kategorie 
 
 responses:
   utter_default:
     - text: "Entschuldigung, ich habe dich nicht verstanden."
-
+  utter_nicht_verstehen:
+    - text: "Damit kenne ich mich nicht aus."
+  utter_nur_zutaten:
+    - text: "Mit {zutaten} kannst du folgende Cocktails machen: {namen} \n Möchtest du ein Rezept sehen?"
+  utter_nur_kategorie:
+    - text: "In der Kategorie {kategorie} fallen mir folgende Cocktails ein: {namen} \n Möchtest du ein Rezept sehen?"
+  utter_beides:
+    - text: "Mit {zutaten} kannst du folgende Cocktails in der Kategorie {kategorie} machen: {namen} \n Möchtest du ein Rezept sehen?"
+  utter_Neustart:
+    - text: "Gut, lass uns noch einmal von vorne anfangen. Nenne mir mindestens eine Cocktailzutat oder eine Cocktail Kategorie."
 
 actions:
   - action_suche_cocktail
   - action_suche_rezept
+  - action_Neustart

@@ -48,82 +48,493 @@ nlu:
     - Was kann ich mit [Bitter](zutaten) machen?
     - Ich habe [Bitter](zutaten) und [Zucker](zutaten)
     - Suche einen Cocktail mit [Whiskey](zutaten)
-
+    - Der Cocktail soll außerdem noch [Minze](zutaten) enthalten.
+    - Der Cocktail soll außerdem noch [Whiskey](zutaten) enthalten.
+    - Der Cocktail soll dazu noch [Gin](zutaten) enthalten.
+    - Der Cocktail soll dazu noch [Beeren](zutaten) enthalten.
+    - Der Cocktail soll noch [Tonic Water](zutaten) enthalten.
+    - Welcher der Cocktails enthält zusätzlich [Minze](zutaten)?
+    - Welcher der Cocktails enthält zusätzlich [Zitrone](zutaten)?
+    - Welcher der Cocktails enthält zusätzlich [Limetten](zutaten)?
+    - Welcher der Cocktails enthält zusätzlich [Wein](zutaten)?
+    - Welcher der Cocktails enthält zusätzlich [Sekt](zutaten)?
+    - Bitte einen mit [Ginger Ale](zutaten)!
+    - Bitte einen mit [Ingwer](zutaten)!
+    - Bitte einen mit [Kirsche](zutaten)!
+    - Ich hätte gerne einen Drink in dem noch [Minze](zutaten) und [Zitrone](zutaten) drin ist.
+    - Ich hätte gerne einen Drink in dem noch [Gin](zutaten) und [Ingwer](zutaten) drin ist.
+    - Ich hätte gerne einen Drink in dem noch [Weinbrand](zutaten) und [Mango](zutaten) drin ist.
+    - [Soda](zutaten) soll auch dabei sein
+    - [Zitronensaft](zutaten) soll auch dabei sein
+    - [Orangensaft](zutaten) soll auch dabei sein
+    - [Orangenlikör](zutaten) soll auch dabei sein
+    - Ich suche einen [Aperitif](kategorie)
+    - Zeig mir bitte einen [Digestif](kategorie)
+    - Ich hätte gern einen klassischen [Longdrink](kategorie)
+    - Gibt es einen [Mocktail](kategorie)?
+    - Empfiehl mir doch einen exotischen [Tiki](kategorie)
+    - Was für einen [Spritz](kategorie) kannst du empfehlen?
+    - Ich möchte einen einfachen [Highball](kategorie)
+    - Such mir bitte einen eleganten [Martini](kategorie) raus
+    - Ich hätte Lust auf einen [Negroni](kategorie)
+    - Ich hätte Lust auf einen [Longdrink](kategorie)
+    - Ich hätte Lust auf einen [Aperitif]kategorie)
+    - Ich hätte Lust auf einen [Sour](kategorie)
+    - Ich hätte Lust auf einen [Mule](kategorie)
+    - Ich hätte Lust auf einen [Spritz](kategorie)
+    - Ich hätte Lust auf einen [Yulep](kategorie)
+    - Kennst du einen guten [Longdrink](kategorie)?
+    - Kennst du einen guten [Aperitif](kategorie)?
+    - Kennst du einen guten [Mule](kategorie)?
+    - Kennst du einen guten [Sour](kategorie)?
+    - Kennst du einen guten [Spritz](kategorie)?
+    - Kennst du einen guten [Digestif](kategorie)?
+    - Ich suche nach einem prickelnden [Fizz](kategorie)
+    - Ich suche nach einem kühlen [Longdrink](kategorie)
+    - Ich suche nach einem sauren [Sour](kategorie)
+    - Ich suche nach einem leckeren [Aperitif](kategorie)
+    - Ich suche nach einem süßen [Mule](kategorie)
+    - Zeig mir einen Cocktail aus der Kategorie [Punch](kategorie)
+    - Zeig mir einen Cocktail aus der Kategorie [Karibik](kategorie)
+    - Zeig mir einen Cocktail aus der Kategorie [Longdrink](kategorie)
+    - Zeig mir einen Cocktail aus der Kategorie [Sour](kategorie)
+    - Zeig mir einen Cocktail aus der Kategorie [Mule](kategorie)
+    - Zeig mir einen Cocktail aus der Kategorie [Yulep](kategorie)
+    - Ich will etwas Kleines, vielleicht einen [Shot](kategorie)
+    - Empfiehl mir einen cremigen [Cream](kategorie) Cocktail
+    - Ich hätte gern etwas Eisiges, einen [Frozen](kategorie)
+    - Was ist ein guter klassischer [Old Fashioned](kategorie)?
+    - Ich suche einen erfrischenden [Mule](kategorie)
+    - Hast du einen fruchtigen [Cocktail](kategorie)?
+    - Ich bin auf der Suche nach einem besonderen [Signature](kategorie) Drink
+    - Ich hätte gern einen [Spritz](kategorie)
+    - Kannst du mir einen [Aperitif](kategorie) zeigen?
+    - Ich suche etwas in Richtung [Digestif](kategorie)
+    - Bitte empfehle mir einen [Longdrink](kategorie)
+    - Ich möchte heute einen [Tiki](kategorie) trinken
+    - Hast du einen passenden [Fizz](kategorie)?
+    - Ich bin auf der Suche nach einem [Highball](kategorie)
+    - Zeig mir doch einen klassischen [Collins](kategorie)
+    - Ich hätte Lust auf einen [Frozen](kategorie)
+    - Gibt es bei euch einen guten [Punch](kategorie)?
+    - Ich nehme gern einen [Martini](kategorie)
+    - Kannst du mir einen [Sour](kategorie) empfehlen?
+    - Ich suche einen [Longdrink](kategorie)
+    - Heute hätte ich gern einen [Aperitif](kategorie)
+    - Ich möchte etwas Süßes, vielleicht einen [Cream](kategorie)
+    - Was wäre ein guter [Longdrink](kategorie)?
+    - Ich hätte gern einen besonderen [Signature](kategorie)
+    - Kennst du einen alkoholfreien [No-ABV](kategorie)?
+    - Zeig mir bitte einen klassischen [Old Fashioned](kategorie)
+    - Heute hätte ich gern einen [Longdrink](kategorie)
+    - Heute hätte ich gern einen [Sour](kategorie)
+    - Heute hätte ich gern einen [Shot](kategorie)
+    - Heute hätte ich gern einen [Aperitif](kategorie)
+    - Hast du einen fruchtigen [Longdrink](kategorie)
+    - Hast du einen fruchtigen [Karibik](kategorie)
+    - Hast du einen fruchtigen [Sour](kategorie)
+    - Hast du einen fruchtigen [Mule](kategorie)
+    - Ich hätte gern einen [Spritz](kategorie)
+    - Ich hätte gern einen [Yulep](kategorie)
+    - Ich hätte gern einen [Longdrink](kategorie)
+    - Ich hätte gern einen [Digestif](kategorie)
+    - Ich hätte gern einen [Mule](kategorie)
+    - Ich suche einen [Aperitif](kategorie)
+    - Ich suche einen [Mule](kategorie)
+    - Ich suche einen [Longdrink](kategorie)
+    - Ich suche einen [Karibik](kategorie)
+    - Ich suche einen [Sour](kategorie)
 
 - intent: cocktail_aussuchen
   examples: |
-    - [Moscow Mule](cocktail)
-    - Ich möchte den [Moscow Mule](cocktail)
-    - [Bloody Mary](cocktail)
-    - den [Mojito](cocktail) bitte
-    - [Jagertee](cocktail)
     - [Mojito](cocktail)
-    - [Caipirinha](cocktail)
+    - Ich möchte den [B52](cocktail)
+    - den [Caipirinha](cocktail) bitte
+    - den [Daquiri](cocktail)
+    - einen [Gimlet](cocktail) bitte
+    - ich hätte gern einen [Godfather](cocktail)
+    - ich nehme den [Highlander](cocktail)
+    - bitte den [Horseneck](cocktail)
+    - [Jagertee](cocktail) bitte
+    - [Margarita](cocktail) klingt gut
+    - zeig mir die Zutaten für den [Manhattan](cocktail)
+    - was brauche ich für einen [Mexikaner](cocktail)?
+    - wie macht man einen [Penicillin](cocktail)
+    - Meine Wahl fällt auf den [Sidecar](cocktail).
+    - Für mich kommt nur der [Zombi](cocktail) infrage.
+    - Ich tendiere zum [Mimosa](cocktail).
+    - Der [Seelbach](cocktail) wäre mein Favorit.
+    - Ich entscheide mich doch für den [Negroni](cocktail).
+    - Kannst du den [Applejack](cocktail) für mich auswählen?
+    - Ich würde den [Contessa](cocktail) bevorzugen.
+    - Am meisten spricht mich der [Williams](cocktail) an.
+    - Ich möchte mehr über den [Spotlight](cocktail) erfahren.
+    - Lass uns den [Tampico](cocktail) nehmen.
+    - Ich bleibe beim [Schmelzwasser](cocktail).
+    - Der [CCC](cocktail) ist genau das Richtige für mich.
+    - Ich habe mich für den [Eierkaffee](cocktail) entschieden.
+    - Kannst du mir die Zusammensetzung des [Bijou](cocktail) nennen?
+    - Wie wird der [Admiral](cocktail) normalerweise serviert?
+    - Ich würde gerne wissen, wie der [Teewodka](cocktail) schmeckt.
+    - Zeig mir bitte die Zubereitungsschritte für den [Wasserbombe](cocktail).
+    - Ich möchte den [Capri](cocktail) näher kennenlernen.
+    - Der [Apple](cocktail) ist mein persönlicher Favorit.
+    - Ich würde mich heute für den [Hurricane](cocktail) entscheiden.
+    - [Pharisäer](cocktail)
+    - Ich möchte den [Grog](cocktail)
+    - den [Creole](cocktail) bitte
+    - den [Poncha](cocktail)
+    - einen [Rumpunsch](cocktail) bitte
+    - ich hätte gern einen [Cosmpolitian](cocktail)
+    - ich nehme den [IBF](cocktail)
+    - bitte den [Lumumba](cocktail)
+    - [Mulata](cocktail) bitte
+    - [Origine](cocktail) klingt gut
+    - zeig mir die Zutaten für den [Planteur](cocktail)
+    - was brauche ich für einen [Affiliate](cocktail)?
+    - wie macht man einen [Camilou](cocktail)
+    - Meine Wahl fällt auf den [C.E.B.](cocktail).
+    
     - [Moscow Mule](cocktail)
-    - [Bloody Mary](cocktail)
-    - [Tequila Sunrise](cocktail)
-    - [Gin Tonic](cocktail)
-    - den [Mojito](cocktail)
-    - einen [Moscow Mule](cocktail) bitte
-    - ich hätte gern einen [Bloody Mary](cocktail)
-    - ich nehme den [Caipirinha](cocktail)
-    - bitte den [Gin Tonic](cocktail)
-    - [Mojito](cocktail) bitte
-    - [Moscow Mule](cocktail)
-    - [Bloody Mary](cocktail) klingt gut
-    - [Gin Tonic](cocktail)
-    - zeig mir die Zutaten für den [Moscow Mule](cocktail)
-    - was brauche ich für einen [Mojito](cocktail)?
-    - wie macht man einen [Bloody Mary](cocktail)
-    - welche Zutaten hat der [Caipirinha](cocktail)
-    - [moscow mule](cocktail)
-    - [MOJITO](cocktail)
-    - [gin tonic](cocktail)
-    - [Old Fashioned](cocktail)
-    - den [Old Fashioned](cocktail) bitte
-    - ich nehme den [Old Fashioned](cocktail)
-    - ich hätte gern einen [Old Fashioned](cocktail)
-    - [Whiskey Sour](cocktail)
-    - einen [Whiskey Sour](cocktail) bitte
-    - ich möchte einen [Whiskey Sour](cocktail)
-    - der [Whiskey Sour](cocktail) klingt gut
-    - [Margarita](cocktail)
-    - bitte eine [Margarita](cocktail)
-    - ich nehme die [Margarita](cocktail)
-    - [Pina Colada](cocktail)
-    - ich hätte gern eine [Pina Colada](cocktail)
-    - die [Pina Colada](cocktail) bitte
-    - [Long Island Iced Tea](cocktail)
-    - einen [Long Island Iced Tea](cocktail)
-    - ich nehme den [Long Island Iced Tea](cocktail)
-    - [White Russian](cocktail)
-    - den [White Russian](cocktail)
-    - bitte den [White Russian](cocktail)
-    - [Black Russian](cocktail)
-    - ich möchte einen [Black Russian](cocktail)
-    - [Negroni](cocktail)
-    - der [Negroni](cocktail) bitte
-    - ich entscheide mich für den [Negroni](cocktail)
-    - [Aperol Spritz](cocktail)
-    - einen [Aperol Spritz](cocktail) bitte
-    - ich nehme den [Aperol Spritz](cocktail)
-    - [Hugo](cocktail)
-    - bitte einen [Hugo](cocktail)
-    - [Cosmopolitan](cocktail)
-    - ich hätte gern einen [Cosmopolitan](cocktail)
-    - [Mai Tai](cocktail)
-    - der [Mai Tai](cocktail) klingt gut
-    - [Sex on the Beach](cocktail)
-    - einen [Sex on the Beach](cocktail)
-    - ich nehme den [Sex on the Beach](cocktail)
-    - [Cuba Libre](cocktail)
-    - bitte einen [Cuba Libre](cocktail)
-    - [French 75](cocktail)
-    - ich hätte gern einen [French 75](cocktail)
-    - [Espresso Martini](cocktail)
-    - den [Espresso Martini](cocktail) bitte
+    - Ich möchte den [Kir Royal](cocktail)
+    - den [Lynchburg Limonade](cocktail) bitte
+    - den [Mint Julep](cocktail)
+    - einen [Pina Colada](cocktail) bitte
+    - ich hätte gern einen [Schottischer Kaffee](cocktail)
+    - ich nehme den [Singapur Sling](cocktail)
+    - bitte den [Tequila Sunrise](cocktail)
+    - [Knob Kriek](cocktail) bitte
+    - [Quarter Deck](cocktail) klingt gut
+    - zeig mir die Zutaten für den [French 75](cocktail)
+    - was brauche ich für einen [Ward Eight](cocktail)?
+    - wie macht man einen [Angle Face](cocktail)
+    - welche Zutaten hat der [Limoncello Spritz](cocktail)
+    - Meine Wahl fällt auf den [Paris Mule](cocktail).
+    - Für mich kommt nur der [London Mule](cocktail) infrage.
+    - Ich tendiere zum [Moscow Mule 2](cocktail).
+    - Der [Paris Mule 2](cocktail) wäre mein Favorit.
+    - Ich entscheide mich doch für den [London Mule 2](cocktail).
+    - Kannst du den [Jack Rose](cocktail) für mich auswählen?
+    - Ich würde den [Grüne Witwe](cocktail) bevorzugen.
+    - Am meisten spricht mich der [Martini klassisch](cocktail) an.
+    - Ich möchte mehr über den [Martini trocken](cocktail) erfahren.
+    - Lass uns den [Martini sweet](cocktail) nehmen.
+    - Ich bleibe beim [Martini spezial](cocktail).
+    - Der [Calvados Martini](cocktail) ist genau das Richtige für mich.
+    - Ich habe mich für den [Rum Cooler](cocktail) entschieden.
+    - Kannst du mir die Zusammensetzung des [Calva Sherry](cocktail) nennen?
+    - Wie wird der [Gin Tonic](cocktail) normalerweise serviert?
+    - Ich würde gerne wissen, wie der [Scotch Soda](cocktail) schmeckt.
+    - Zeig mir bitte die Zubereitungsschritte für den [Ingwer Fizz](cocktail).
+    - Ich möchte den [Rüdesheimer Kaffee](cocktail) näher kennenlernen.
+    - Der [Irish Coffee](cocktail) ist mein persönlicher Favorit.
+    - Ich würde mich heute für den [Lady Brown](cocktail) entscheiden.
+    - [Rock Lobster](cocktail)
+    - Ich möchte den [Planters Punch](cocktail)
+    - den [Tri Punch](cocktail) bitte
+    - den [Tispy Mermaid](cocktail)
+    - einen [Mero Rumpunsch](cocktail) bitte
+    - ich hätte gern einen [Tanja Rumpunsch](cocktail)
+    - ich nehme den [Big Bamboo](cocktail)
+    - bitte den [After Dark](cocktail)
+    - [Manisch Water](cocktail) bitte
+    - [Cuba Libre](cocktail) klingt gut
+    - zeig mir die Zutaten für den [Imperial Punch](cocktail)
+    - was brauche ich für einen [Mai Tai](cocktail)?
+    - wie macht man einen [Missionary Downfall](cocktail)
+    - welche Zutaten hat der [Tea Cobbler](cocktail)
+    - Meine Wahl fällt auf den [Cherry Fizz](cocktail).
+    - Für mich kommt nur der [Cherry Sour](cocktail) infrage.
+    - Ich tendiere zum [Cherry Smash](cocktail).
+    - Der [Cap Luc](cocktail) wäre mein Favorit.
+    - Ich entscheide mich doch für den [Kir Normand](cocktail).
+    - Kannst du den [Le Normandy](cocktail) für mich auswählen?
 
+    - Bitte gib mir das Rezept für den [Blackberry Mint Julep](cocktail).
+    - Ich nehme den [Prince of Wales](cocktail).
+    - Ich möchte den [Sex on the Beach](cocktail) auswählen.
+    - Ich würde gerne den [Le Père Bis](cocktail) probieren.
+    - Ich hätte gerne einen [Maple und Cardamom](cocktail).
+    - Bitte zeig mir den [Stone Cold Larceny](cocktail).
+    - Ich nehme den [Stern des Südens](cocktail).
+    - Kannst du mir den [Bizzy Izzy Highball](cocktail) zeigen?
+    - Ich möchte den [Blood and Sand](cocktail).
+    - Bitte gib mir das Rezept für den [Blood and Sand](cocktail).
+    - Ich nehme den [Bizzy Izzy Highball](cocktail).
+    - Ich möchte den [Stern des Südens](cocktail) auswählen.
+    - Ich würde gerne den [Stone Cold Larceny](cocktail) probieren.
+    - Ich hätte gerne einen [Le père bis](cocktail).
+    - Bitte zeig mir den [Sex on the beach](cocktail).
+    - Ich nehme den [Prince of Wales](cocktail).
+    - Kannst du mir den [Blackberry mint Julep](cocktail) zeigen?
+    - Ich möchte den [Maple und Cardamom](cocktail).
 
+- intent: Neustart
+  examples: |
+    - Das ist nichts für mich.
+    - Ich glaube wir müssen nochmal von vorne anfangen.
+    - Das ist nicht der Cocktail den ich suche.
+    - Das schmeckt mir nicht.
+    - Da war nichts für mich dabei. Lass uns noch mal von vorne anfangen. 
+    - Wir sind in einer Sackgasse gelandet. 
+    - Lass uns die Suche von vorne starten.
+    - Bitte vergiss die bisherigen Zutaten. 
+    - Können wir noch einmal ganz von vorne beginnen?
+    - Ich möchte lieber nach etwas anderem suchen.
+    - Die Vorschläge gefallen mir nicht wirklich.
+    - Lass uns eine andere Richtung einschlagen.
+    - Ich würde die Suche gerne neu beginnen.
+    - Können wir die bisherigen Ergebnisse verwerfen?
+    - Ich bin mit der Auswahl nicht zufrieden.
+    - Lass uns noch einmal ganz neu suchen.
+    - Ich möchte andere Cocktails vorgeschlagen bekommen.
+    - Die bisherigen Drinks treffen nicht meinen Geschmack.
+    - Wir sollten noch einmal von vorne anfangen.
+    - Bitte starte die Suche erneut.
+    - Ich möchte meine Auswahl zurücksetzen.
+    - Lass uns die bisherigen Angaben löschen.
+    - Ich habe mir etwas anderes vorgestellt.
+    - Keiner dieser Cocktails spricht mich an.
+    - Können wir die Suche noch einmal neu aufsetzen?
+    - Ich möchte lieber andere Zutaten verwenden.
+    - Die bisherigen Empfehlungen passen nicht zu mir.
+    - Ich würde gerne eine komplett neue Suche starten.
+    - Vergiss meine bisherige Auswahl.
+    - Lass uns noch einmal ganz neu anfangen.
+    - Ich bin mit diesen Ergebnissen nicht glücklich.
+    - Zeig mir lieber andere Möglichkeiten.
+    - Ich möchte die bisherigen Vorschläge nicht weiterverfolgen.
+    - Können wir die Suche zurücksetzen und neu beginnen?
+    - Ich habe meine Meinung geändert.
+    - Diese Cocktails sind nicht das, was ich mir vorgestellt habe.
+    - Ich möchte lieber einen ganz anderen Drink finden.
+    - Lass uns die bisherige Suche abbrechen.
+    - Bitte entferne die Zutaten, die ich vorher genannt habe.
+    - Ich würde gerne noch einmal von vorn anfangen.
+    - Das ist nicht die richtige Auswahl für mich.
+    - Ich möchte andere Kriterien für die Suche verwenden.
+    - Können wir noch einmal neu anfangen, ohne die bisherigen Angaben?
+    - Die Empfehlungen überzeugen mich nicht.
+    - Ich würde gerne eine neue Richtung ausprobieren.
+    - Bitte setze meine Cocktailauswahl zurück.
+    - Ich möchte nicht mehr mit diesen Zutaten suchen.
+    - Lass uns die bisherigen Ergebnisse vergessen.
+    - Ich bin noch nicht fündig geworden.
+    - Können wir einen neuen Versuch starten?
+    - Ich möchte eine andere Art von Cocktail suchen.
+    - Die vorgeschlagenen Drinks passen leider nicht.
+    - Ich will meine Suche von Grund auf ändern.
+    - Bitte beginne noch einmal mit der Cocktailauswahl.
 
+- intent: alles_andere
+  examples: |
+    - Wie ist morgen das Wetter?
+    - sdfs werwerfg sdfsfsf
+    - kölkö piopi .mlön,mn ljkl
+    - werwerwer
+    - gscgerd
+    - piliuweg
+    - lsdfiuenbs oibune boiu
+    - pius boiuöwm cpoopi cpoipb mweie
+    - loupoujj asyyxws
+    - popiweö
+    - Wie heißt du? 
+    - Kannst du über andere Themen sprechen?
+    - Das Wetter hier ist schön.
+    - Ich bin 28 Jahre alt.
+    - Ich glaube an Gott.
+    - Ich glaube nicht an die Schöpfung.
+    - KI wird uns alle zerstören. 
+    - Ich höre gerne Podcasts.
+    - Das ist schön.
+    - Das ist ein Buch. 
+    - Das ist ein Baum auf einer Wiese.
+    - Ich suche ein Buch von der Autorin J.K. Rowling.
+    - Ich suche einen Film mit Drachen. 
+    - Ich suche meine Jacke.
+    - Heute hätte ich gerne frei. 
+    - Heute hätte ich lieber Urlaub. 
+    - Kennst du meine Mutter?
+    - Kennst du das Land Dänemark?
+    - Kennst du Oskar Wilde?
+    - Ich habe Essen zu hause. 
+    - Ich habe Angst vor Mäusen. 
+    - Ich habe noch nie Erde gegessen. 
+    - Ich habe eine Jacke und eine Hose.
+    - Wie wird morgen das Wetter?
+    - Kannst du mir etwas über die Geschichte erzählen?
+    - Ich suche ein gutes Buch zum Lesen.
+    - Welche Musik hörst du am liebsten?
+    - Erzähl mir einen interessanten Fakt.
+    - Wie funktioniert künstliche Intelligenz?
+    - Ich möchte gerne einen Film anschauen.
+    - Kennst du einen guten Science-Fiction-Film?
+    - Was kann man am Wochenende unternehmen?
+    - Wie spät ist es gerade?
+    - Kannst du mir bei meinen Hausaufgaben helfen?
+    - Ich brauche eine Geschenkidee für einen Freund.
+    - Welche Stadt sollte man unbedingt besuchen?
+    - Ich interessiere mich für Astronomie.
+    - Kannst du mir ein Rätsel stellen?
+    - Ich möchte etwas Neues lernen.
+    - Was ist der Unterschied zwischen einem See und einem Meer?
+    - Wie entsteht eigentlich ein Regenbogen?
+    - Kannst du mir eine Geschichte erzählen?
+    - Ich suche ein Rezept für einen Kuchen.
+    - Welche Programmiersprache ist für Anfänger geeignet?
+    - Wie kann ich meine Wohnung gemütlicher gestalten?
+    - Ich würde gerne eine Fremdsprache lernen.
+    - Was bedeutet das Wort Nachhaltigkeit?
+    - Kennst du einen guten Podcast über Geschichte?
+    - Ich möchte mehr über Dinosaurier erfahren.
+    - Kannst du mir bei der Planung meines Urlaubs helfen?
+    - Welche Sportarten sind besonders beliebt?
+    - Ich suche ein Geschenk für meine Mutter.
+    - Wie pflegt man Zimmerpflanzen?
+    - Was ist heute in der Welt passiert?
+    - Ich möchte meine Ernährung umstellen.
+    - Kannst du mir einen Witz erzählen?
+    - Wie kann ich besser schlafen?
+    - Ich interessiere mich für Fotografie.
+    - Welche Tiere leben im Regenwald?
+    - Kannst du mir erklären, wie das Internet funktioniert?
+    - Ich brauche Tipps für ein Bewerbungsgespräch.
+    - Was kann ich gegen Langeweile tun?
+    - Ich möchte mein Englisch verbessern.
+    - Welche Sehenswürdigkeiten gibt es in Italien?
+    - Wie schreibt man eine gute Bewerbung?
+    - Ich suche ein neues Hobby.
+    - Kannst du mir eine spannende Dokumentation empfehlen?
+    - Was ist der höchste Berg der Welt?
+    - Ich möchte mehr Sport treiben.
+    - Wie kann ich beim Lernen konzentrierter bleiben?
+    - Kannst du mir bei einer Matheaufgabe helfen?
+    - Ich würde gerne ein Gedicht lesen.
+    - Welche technischen Erfindungen haben die Welt verändert?
+    - Ich suche einen guten Thriller.
+    - Wie funktioniert eine Solaranlage?
+    - Was kann ich meinen Freunden zum Geburtstag schenken?
+    - Kannst du mir die Planeten unseres Sonnensystems erklären?
+    - Ich interessiere mich für Mode.
+    - Wie kann ich Geld sparen?
+    - Welche Berufe haben gute Zukunftsaussichten?
+    - Ich möchte meinen Garten neu gestalten.
+    - Kennst du ein paar interessante Fakten über Tiere?
+    - Was ist der Unterschied zwischen Wetter und Klima?
+    - Ich suche Informationen über das alte Ägypten.
+    - Kannst du mir eine passende Playlist empfehlen?
+
+- lookup: cocktail
+  examples: |
+    - B52
+    - Blackberry Mint Julep
+    - Caipirinha
+    - Daquiri
+    - Gimlet
+    - Godfather
+    - Highlander
+    - Horseneck
+    - Jagertee
+    - Kir Royal
+    - Lynchburg Limonade
+    - Margarita
+    - Manhattan
+    - Mexikaner
+    - Mint Julep
+    - Mojito
+    - Penicillin
+    - Pina Colada
+    - Prince of Wales
+    - Sex on the Beach
+    - Schottischer Kaffee
+    - Sidecar
+    - Singapur Sling
+    - Tequila Sunrise
+    - Zombi
+    - Knob Kriek
+    - Le Père Bis
+    - Maple und Cardamom
+    - Quarter Deck
+    - Stone Cold Larceny
+    - French 75
+    - Mimosa
+    - Seelbach
+    - Negroni
+    - Angle Face
+    - Applejack
+    - Ward Eight
+    - Contessa
+    - Limoncello Spritz
+    - Moscow Mule
+    - Paris Mule
+    - London Mule
+    - Moscow Mule 2
+    - Paris Mule 2
+    - London Mule 2
+    - Williams
+    - Spotlight
+    - Jack Rose
+    - Tampico
+    - Schmelzwasser
+    - CCC
+    - Grüne Witwe
+    - Eierkaffee
+    - Bijou
+    - Martini klassisch
+    - Martini trocken
+    - Martini sweet
+    - Martini spezial
+    - Calvados Martini
+    - Admiral
+    - Teewodka
+    - Rum Cooler
+    - Stern des Südens
+    - Wasserbombe
+    - Capri
+    - Calva Sherry
+    - Apple
+    - Hurricane
+    - Gin Tonic
+    - Scotch Soda
+    - Ingwer Fizz
+    - Pharisäer
+    - Grog
+    - Rüdesheimer Kaffee
+    - Irish Coffee
+    - Lady Brown
+    - Creole
+    - Poncha
+    - Rock Lobster
+    - Planters Punch
+    - Tri Punch
+    - Tispy Mermaid
+    - Rumpunsch
+    - Mero Rumpunsch
+    - Tanja Rumpunsch
+    - Big Bamboo
+    - After Dark
+    - Manisch Water
+    - Bizzy Izzy Highball
+    - Cuba Libre
+    - Cosmpolitian
+    - IBF
+    - Imperial Punch
+    - Lumumba
+    - Mai Tai
+    - Missionary Downfall
+    - Mulata
+    - Origine
+    - Tea Cobbler
+    - Planteur
+    - Cherry Fizz
+    - Blood and Sand
+    - Cherry Sour
+    - Affiliate
+    - Cherry Smash
+    - Camilou
+    - Cap Luc
+    - Kir Normand
+    - C.E.B
+    - Le Normandy
 
 

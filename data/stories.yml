@@ -1,9 +1,0 @@
-version: "3.1"
-
-stories:
-- story: Cocktail suchen und Zutaten anzeigen
-  steps:
-  - intent: suche_cocktail
-  - action: action_suche_cocktail
-  - intent: cocktail_aussuchen
-  - action: action_suche_rezept

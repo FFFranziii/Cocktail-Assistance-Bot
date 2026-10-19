@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+- rule: Cocktail suchen
+  steps:
+  - intent: suche_cocktail
+  - action: action_suche_cocktail
+
+- rule: Zutaten suchen
+  steps:
+  - intent: cocktail_aussuchen
+  - action: action_suche_rezept
+
+- rule: Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: Ich verstehe dich nicht
+  steps:
+  - intent: alles_andere
+  - action: utter_nicht_verstehen
+
+- rule: Neustart
+  steps:
+  - intent: Neustart
+  - action: action_Neustart

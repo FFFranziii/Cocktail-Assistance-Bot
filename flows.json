@@ -1,10 +1,63 @@
 [
     {
+        "id": "d54599eed3170d11",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a684aedca9b1a177",
+        "type": "inject",
+        "z": "d54599eed3170d11",
+        "name": "Excel laden",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "a7209e1108420155"
+            ]
+        ]
+    },
+    {
+        "id": "3a7b2f966b00f78f",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 160,
+        "wires": []
+    },
+    {
         "id": "4884a4320c1b718a",
         "type": "function",
         "z": "d54599eed3170d11",
         "name": "function 1",
-        "func": "let cocktails = msg.payload; // JSON-Array aus Excel\nlet zutatMap = {};\n\ncocktails.forEach(cocktail => {\n    // Array für alle Zutaten des aktuellen Cocktails\n    let zutatenArray = [];\n\n    // Alle Spalten, die Zutaten enthalten\n    [\"Spirituose\", \"Alkoholische Aromazutat\", \"Verlängerer\", \"Filler\",\n        \"Frucht\", \"sonstige Zutaten\", \"Eis\"].forEach(col => {\n            if (cocktail[col]) {\n                // Trennen bei Komma oder Semikolon\n                let teile = cocktail[col].split(/[,;]+/).map(z => z.trim().toLowerCase());\n                zutatenArray.push(...teile);\n            }\n        });\n\n    // Map aufbauen: jede Zutat → Cocktails, inkl. kompletter Zutatenliste\n    zutatenArray.forEach(zutat => {\n        if (!zutatMap[zutat]) {\n            zutatMap[zutat] = [];\n        }\n        zutatMap[zutat].push({\n            name: cocktail.Cocktail,\n            zutaten: zutatenArray // <-- hier speichern wir die **komplette Zutatenliste**\n        });\n    });\n});\n\n// Map global speichern\nglobal.set(\"zutatMap\", zutatMap);\n\nreturn msg;\n",
+        "func": "let cocktails = msg.payload; // JSON-Array aus Excel\nlet zutatMap = {};\n\ncocktails.forEach(cocktail => {\n    // Array für alle Zutaten des aktuellen Cocktails\n    let zutatenArray = [];\n\n    // Alle Spalten, die Zutaten enthalten\n    [\"Spirituose\", \"Alkoholische Aromazutat\", \"Verlängerer\", \"Filler\",\n        \"Frucht\", \"sonstige Zutaten\", \"Eis\", \"Kategorie\"].forEach(col => {\n            if (cocktail[col]) {\n                // Trennen bei Komma oder Semikolon\n                let teile = cocktail[col].split(/[,;]+/).map(z => z.trim().toLowerCase());\n                zutatenArray.push(...teile);\n            }\n        });\n\n    // Map aufbauen: jede Zutat → Cocktails, inkl. kompletter Zutatenliste\n    zutatenArray.forEach(zutat => {\n        if (!zutatMap[zutat]) {\n            zutatMap[zutat] = [];\n        }\n        zutatMap[zutat].push({\n            name: cocktail.Cocktail,\n            zutaten: zutatenArray // <-- hier speichern wir die **komplette Zutatenliste**\n        });\n    });\n});\n\n// Map global speichern\nglobal.set(\"zutatMap\", zutatMap);\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18,5 +71,308 @@
                 "f7a20fdbada3a83e"
             ]
         ]
+    },
+    {
+        "id": "f7a20fdbada3a83e",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a7209e1108420155",
+        "type": "XLSX-to-json",
+        "z": "d54599eed3170d11",
+        "name": "xlsx to json",
+        "filepath": "C:\\Users\\fande\\Documents\\Freizeit\\Cocktail_Test.xlsx",
+        "rangecell": "",
+        "columnkey": "",
+        "sheet": "Tabelle1",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "3a7b2f966b00f78f",
+                "4884a4320c1b718a"
+            ]
+        ]
+    },
+    {
+        "id": "f36b8c57349ab7fd",
+        "type": "http in",
+        "z": "d54599eed3170d11",
+        "name": "Suche Zutat",
+        "url": "/cocktail_lookup",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 380,
+        "wires": [
+            [
+                "c2619c216fe2dad9",
+                "f7214abbeb31d872",
+                "7adbb266e4fe5d47"
+            ]
+        ]
+    },
+    {
+        "id": "c2619c216fe2dad9",
+        "type": "function",
+        "z": "d54599eed3170d11",
+        "name": "function 3",
+        "func": "// --- payload aus Rasa abrufen ---\nlet userZutaten = msg.payload.zutaten;\n\nif (!Array.isArray(userZutaten)) {\n    userZutaten = [userZutaten];\n}\n\nuserZutaten = userZutaten.map(z => z.toLowerCase());\n\n// --- Zutat-Map laden ---\nlet zutatMap = global.get(\"zutatMap\");\nif (!zutatMap) {\n    msg.payload = { text: \"Die Zutatendaten sind noch nicht geladen.\", cocktails: [] };\n    return msg;\n}\n\n// --- Für jede Zutat passende Cocktails sammeln ---\nlet zutatenTreffer = userZutaten.map(zutat => {\n    let treffer = [];\n\n    for (let mapZutat in zutatMap) {\n        if (mapZutat.includes(zutat)) {\n            treffer.push(...zutatMap[mapZutat]);\n        }\n    }\n\n    return treffer;\n});\n\n// --- Schnittmenge bilden (UND) ---\nlet cocktailMap = {};\n\nzutatenTreffer[0].forEach(c => {\n    cocktailMap[c.name] = c;\n});\n\nfor (let i = 1; i < zutatenTreffer.length; i++) {\n    let aktuelleNamen = new Set(zutatenTreffer[i].map(c => c.name));\n    for (let name in cocktailMap) {\n        if (!aktuelleNamen.has(name)) {\n            delete cocktailMap[name];\n        }\n    }\n}\n\nlet ergebnisse = Object.values(cocktailMap);\n\n// --- Ergebnis bauen ---\nif (ergebnisse.length === 0) {\n    msg.payload = {\n        text: \"Kein Cocktail mit allen genannten Zutaten gefunden.\",\n        cocktails: []\n    };\n} else {\n    msg.payload = {\n        cocktails: ergebnisse.map(c => ({\n            name: c.name,\n            zutaten: c.zutaten\n        }))\n    };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 80,
+        "y": 440,
+        "wires": [
+            [
+                "dbf42521b95545d6",
+                "6921b0c2e222d3bd"
+            ]
+        ]
+    },
+    {
+        "id": "dbf42521b95545d6",
+        "type": "http response",
+        "z": "d54599eed3170d11",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 130,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6921b0c2e222d3bd",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a85ef6ca380682e3",
+        "type": "inject",
+        "z": "d54599eed3170d11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"zutaten\": [\"Longdrink\"] }",
+        "payloadType": "json",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "c2619c216fe2dad9"
+            ]
+        ]
+    },
+    {
+        "id": "f7214abbeb31d872",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7adbb266e4fe5d47",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.tracker.latest_message.entities[0].value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e227e3b62a19076e",
+        "type": "http in",
+        "z": "d54599eed3170d11",
+        "name": "Suche Zutat",
+        "url": "/zutaten_lookup",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 670,
+        "y": 400,
+        "wires": [
+            [
+                "946ebaa2552d257d",
+                "2c3337ddbdaab431",
+                "fd71d244068a02e7"
+            ]
+        ]
+    },
+    {
+        "id": "946ebaa2552d257d",
+        "type": "function",
+        "z": "d54599eed3170d11",
+        "name": "function 2",
+        "func": "// --- Cocktailname aus Rasa abrufen ---\nlet cocktailName = msg.payload.cocktail; // z.B. \"Moscow Mule\"\n\nif (!cocktailName || typeof cocktailName !== \"string\") {\n    msg.payload = { text: \"Kein Cocktailname übergeben.\" };\n    return msg;\n}\n\n// für Vergleich normalisieren\nlet cocktailNameLower = cocktailName.toLowerCase();\n\n// --- Zutat-Map laden ---\nlet zutatMap = global.get(\"zutatMap\");\nif (!zutatMap) {\n    msg.payload = { text: \"Die Zutatendaten sind noch nicht geladen.\" };\n    return msg;\n}\n\n// --- Cocktail suchen ---\nlet gefundenerCocktail = null;\n\nfor (let zutat in zutatMap) {\n    for (let cocktail of zutatMap[zutat]) {\n        if (cocktail.name.toLowerCase() === cocktailNameLower) {\n            gefundenerCocktail = cocktail;\n            break;\n        }\n    }\n    if (gefundenerCocktail) break;\n}\n\n// --- Ergebnis bauen ---\nif (!gefundenerCocktail) {\n    msg.payload = {\n        text: `Ich habe keinen Cocktail namens \"${cocktailName}\" gefunden.`\n    };\n} else {\n    msg.payload = {\n        name: gefundenerCocktail.name,      // Original-Schreibweise\n        zutaten: gefundenerCocktail.zutaten // Originale Zutatenliste\n    };\n}\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "48fc649e814e1a43",
+                "ea2f63ee0fe1a62d"
+            ]
+        ]
+    },
+    {
+        "id": "48fc649e814e1a43",
+        "type": "http response",
+        "z": "d54599eed3170d11",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ea2f63ee0fe1a62d",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f151e5d879ed13aa",
+        "type": "inject",
+        "z": "d54599eed3170d11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"cocktail\": \"Moscow Mule\" }",
+        "payloadType": "json",
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "946ebaa2552d257d"
+            ]
+        ]
+    },
+    {
+        "id": "2c3337ddbdaab431",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fd71d244068a02e7",
+        "type": "debug",
+        "z": "d54599eed3170d11",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.tracker.latest_message.entities[0].value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4c3d8b404ca4461e",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-xlsx-to-json": "1.0.0"
+        }
     }
 ]
